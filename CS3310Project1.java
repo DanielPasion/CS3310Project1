@@ -238,7 +238,6 @@ public class CS3310Project1{
 
 
 
-
     //Helper Methods
     //Add matrices
     private static int[][] add(int[][] a,int[][] b,int size){
@@ -294,21 +293,6 @@ public class CS3310Project1{
             for(int j = 0; j < size; j++){
                 solution[i][j] = counter;
                 counter--;
-            }
-        }
-
-        return solution;
-    }
-
-
-    public static int[][] sequentialMatrixBy10(int size){
-        int[][] solution = new int[size][size];
-        int counter = 10;
-
-        for(int i = 0; i < size; i++){
-            for(int j = 0; j < size; j++){
-                solution[i][j] = counter;
-                counter+=10;
             }
         }
 
