@@ -791,13 +791,13 @@ public class CS3310Project1TestCases extends CS3310Project1 {
         divideAndConquer(matrix1024Up,matrix1024Down,1024);
         endTime = System.nanoTime();
         duration = (endTime - startTime);
-        System.out.println("Test 512x512 A * B took " + duration + " nanoseconds for divide and conquer");
+        System.out.println("Test 1024x1024 A * B took " + duration + " nanoseconds for divide and conquer");
 
         startTime = System.nanoTime();
         strassen(matrix1024Up,matrix1024Down,1024);
         endTime = System.nanoTime();
         duration = (endTime - startTime);
-        System.out.println("Test 512x512 A * B took " + duration + " nanoseconds for strassen");
+        System.out.println("Test 1024x1024 A * B took " + duration + " nanoseconds for strassen");
 
         //A * A
         System.out.println("\n1024x1024 A*A Cases:");
@@ -863,10 +863,13 @@ public class CS3310Project1TestCases extends CS3310Project1 {
         int[][] A = {{2,0,-1,6},{3,7,8,0},{-5,1,6,-2},{8,0,1,7}};
         int[][] B = {{0,1,6,3},{-2,8,7,1},{2,0,-1,0},{9,1,6,-2}};
 
+        System.out.println("Sanity Checks: ");
+        System.out.print("BruteForce: ");
         System.out.println(Arrays.deepToString(bruteForce(A,B,4)));
+        System.out.print("Divide and Conquer: ");
         System.out.println(Arrays.deepToString(divideAndConquer(A,B,4)));
+        System.out.print("Strassen: ");
         System.out.println(Arrays.deepToString(strassen(A,B,4)));
-
     
 
         
